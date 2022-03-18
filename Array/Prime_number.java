@@ -1,0 +1,42 @@
+package Array;
+
+import java.util.Scanner;
+
+public class Prime_number {
+public static void main(String[] args) {
+        
+        int temp;
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter number of elements");
+        int n=s.nextInt();
+        int arr[]=new int[n];
+        
+        System.out.println("Enter elements");
+
+        for(int i=0;i<n;i++){
+            arr[i]=s.nextInt();
+        }
+        for (int i = 0; i < n; i++) {
+            boolean value=true;
+            for (int j = 2; j <=arr[i]/2; j++) 
+        {
+            temp=arr[i]%j;
+            if(temp==0)
+            {
+                value=false;
+                break;     
+        }
+            
+        }
+            if (value) 
+        {
+            System.out.println("Entered number is Prime number = "+arr[i]);   
+        } 
+        else 
+        {
+            System.out.println("Entered number is not a Prime number = "+arr[i]); 
+        }
+}
+        
+}
+}
